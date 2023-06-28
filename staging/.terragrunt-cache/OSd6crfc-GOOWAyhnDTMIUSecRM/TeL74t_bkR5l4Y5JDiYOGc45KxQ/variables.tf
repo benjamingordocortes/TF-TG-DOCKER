@@ -1,4 +1,15 @@
 variable "image" {
   type        = string
-  description = "GCP project ID to use"
+  description = "name image"
+}
+
+variable "nimage" {
+  type = string
+  description = "nombre contenedor"
+}
+
+variable "external" {
+  type = string
+  description = "port external"
+
 }

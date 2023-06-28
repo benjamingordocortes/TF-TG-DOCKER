@@ -14,12 +14,11 @@ resource "docker_image" "image" {
   keep_locally = false
 }
 
-resource "docker_container" "nginx" {
+resource "docker_container" "image" {
   image = docker_image.image.image_id
-  name  = "tutorial"
-
+  name  = var.nimage
   ports {
     internal = 80
-    external = 8000
+    external = var.external
   }
 }
